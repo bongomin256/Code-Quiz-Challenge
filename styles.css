@@ -6,6 +6,7 @@
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   background-color: grey;
   color: white;
@@ -146,4 +147,24 @@ form {
 .display {
   font-size: 25px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 780px), (max-width: 460px) {
+  header,
+  .welcome,
+  .done,
+  .highscore,
+  .question-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .time {
+    margin-top: 10px;
+  }
+
+  main {
+    margin: 0 auto;
+  }
 }
