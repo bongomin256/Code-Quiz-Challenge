@@ -121,7 +121,72 @@ function displayHighscores(event) {
 
 };
 
+// adding eventlistener to submit button 
+submitBtn.addEventListener("click", displayHighscores)
 
+//adding the eventlsitner to all the questions answers for when they are clicked
+option1.addEventListener("click", clickedAnswer)
+option2.addEventListener("click", clickedAnswer)
+option3.addEventListener("click", clickedAnswer)
+option4.addEventListener("click", clickedAnswer)
 
+// adding Evenlistener to the start quiz button.
 
+startButton.addEventListener("click", startGame)
+
+//creating the array object questions
+var questions = [
+    {
+        Question: "Commonly Used Data type Do not include?",
+        Answer: "alert",
+        Options: [
+            "Strings",
+            "Booleans",
+            "alert",
+            "numbers",
+        ],
+    },
+    {
+        Question: "The condition in an if/else statement is enclosed within?",
+        Answer: "Curly brackets",
+        Options: [
+            "Quotes",
+            "Curly brackets",
+            "Square brackets",
+            "Booleans"
+        ]
+    },
+    {
+        Question: "What is the correct syntax for referring to an external script called 'script.js'?",
+        Answer: "<script src='script.js'>",
+        Options: [
+            "<script src='script.js'>",
+            "<script name='script.js'>",
+            "<script href='script.js'>",
+            "<script file='script.js'>"
+        ]   
+    },
+    {
+        Question: "Arrays in JavaScript can be used to store?",
+        Answer: "All the above",
+        Options: [
+            "Number and Strings",
+            "Booleans",
+            "Other arrays",
+            "All the above"
+        ]   
+    },
+    {
+        Question: "What does HTML stands for?",
+        Answer: "Hyper Text MarkUp Language",
+        Options: [
+            "Hyper Tool Multi Language",
+            "Hyper Text MarkUp Language",
+            "Hyper Text Multiple Language",
+            "Hyper Text Preprocessor"
+        ]
+    }
+];
+
+// calling the init function
 init();
